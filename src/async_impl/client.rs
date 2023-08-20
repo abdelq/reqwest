@@ -1124,7 +1124,7 @@ impl ClientBuilder {
     ///
     /// If the ping is not acknowledged within the timeout, the connection will be closed.
     /// Does nothing if `http2_keep_alive_interval` is disabled.
-    /// Default is currently disabled.
+    /// Default is 20 seconds.
     pub fn http2_keep_alive_timeout(mut self, timeout: Duration) -> ClientBuilder {
         self.config.http2_keep_alive_timeout = Some(timeout);
         self
